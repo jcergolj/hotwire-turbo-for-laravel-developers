@@ -1,0 +1,16 @@
+<!-- inside blade -->
+<head>
+    <meta name="turbo-refresh-method" content="morph">
+    <!-- default: replace -->
+    <meta name="turbo-refresh-scroll" content="preserve">
+    <!-- default: reset -->
+
+    <!-- turbo laravel specific component -->
+    <x-turbo::refreshes-with method="morph" scroll="preserve" />
+</head>
+
+<!-- to prevent updating the content -->
+<div data-turbo-permanent></div>
+
+<!-- morphing inside turbo frames -->
+<turbo-frame id="my-frame" refresh="morph"></turbo-frame>

@@ -1,0 +1,21 @@
+// users/show.blade.php
+<h1>User Details</h1>
+<turbo-frame id="user-edit">
+    joe doe <x-linke href="{{ route('users.edit', $user) }}">Edit</x-link>
+</turbo-frame>
+
+// users/edit.blade.php
+<h1>Edit User</h1>
+<turbo-frame id="user-edit">
+    <x-form method="patch" action="{{ route('users.update', $user) }}">
+        <x-text-input type="text" name="name" />
+        <x-primary-button>
+            Save
+        </x-primary-button>
+    </x-form>
+</turbo-frame>
+
+// eager-loading frames
+<turbo-frame id="eager-load" src="https://eager-load-content.php">
+    Loading
+</turbo-frame>
